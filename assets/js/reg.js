@@ -10,6 +10,8 @@ function toggleReg(event=null){
         history.pushState({},"","?internReg=true")
     } else {
         history.pushState({},"","/")
+        document.getElementById('about').scrollIntoView();
+
     }
 
 }
