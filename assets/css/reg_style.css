@@ -1,0 +1,405 @@
+/* Importing Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.container-reg {
+  position: absolute;
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  top: 41px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: fit-content;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.container-reg.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.container-reg .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container-reg .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #5f8fc4;
+}
+
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  width: 100%;
+  height: 45px;
+  margin: 0 1.3vw;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #5f8fc4, #0494fa);
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #5f8fc4, #0494fa);
+}
+
+.blurblackbg {
+  background-color: rgba(3, 3, 3, 0.264);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Domain dropdown styles - modified to match form */
+/* Domain dropdown styles - CSS-only click functionality */
+.select {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+  color: #333;
+}
+
+/* Hide the checkbox but use it for state management */
+.dropdown-toggle {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.selected {
+  background-color: #f8f8f8;
+  padding: 10px 15px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  cursor: pointer;
+}
+
+.selected:focus, .selected:active {
+  border-color: #5f8fc4;
+  outline: none;
+}
+
+.arrow {
+  position: relative;
+  right: 0;
+  height: 10px;
+  width: 25px;
+  fill: #333;
+  z-index: 2;
+  transition: 300ms;
+  transform: rotate(-90deg);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: -100px;
+  opacity: 0;
+  transition: 300ms;
+  z-index: 10;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: auto;
+  height: 26vh;
+}
+
+/* Show options when checkbox is checked */
+.dropdown-toggle:checked ~ .options {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Rotate arrow when dropdown is open */
+.dropdown-toggle:checked ~ .selected .arrow {
+  transform: rotate(0deg);
+}
+
+/* Style the selected field when dropdown is open */
+.dropdown-toggle:checked ~ .selected {
+  border-color: #5f8fc4;
+}
+
+
+.option {
+  border-radius: 5px;
+  padding: 8px 10px;
+  transition: 300ms;
+  background-color: #fff;
+  width: 100%;
+  font-size: 15px;
+}
+
+.option:hover {
+  background-color: #f0f8ff;
+}
+
+/* Auto-close dropdown when an option is clicked */
+.options input[type="radio"]:checked ~ .dropdown-toggle {
+  display: none;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options label {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+}
+
+.options label::before {
+  content: attr(data-txt);
+}
+
+.options input[type="radio"]:checked + label {
+  display: none;
+}
+
+.options input[type="radio"]#all:checked + label {
+  display: none;
+}
+
+.select:has(.options input[type="radio"]#all:checked) .selected-text {
+  content: attr(data-default);
+}
+
+.select:has(.options input[type="radio"]#option-1:checked) .selected-text {
+  content: attr(data-one);
+}
+
+.select:has(.options input[type="radio"]#option-2:checked) .selected-text {
+  content: attr(data-two);
+}
+
+.select:has(.options input[type="radio"]#option-3:checked) .selected-text {
+  content: attr(data-three);
+}
+
+.select:has(.options input[type="radio"]#option-4:checked) .selected-text {
+  content: attr(data-four);
+}
+
+.select:has(.options input[type="radio"]#option-5:checked) .selected-text {
+  content: attr(data-five);
+}
+
+.select:has(.options input[type="radio"]#option-6:checked) .selected-text {
+  content: attr(data-six);
+}
+
+.select:has(.options input[type="radio"]#option-7:checked) .selected-text {
+  content: attr(data-seven);
+}
+
+.select:has(.options input[type="radio"]#option-8:checked) .selected-text {
+  content: attr(data-eight);
+}
+
+/* Radio input styles */
+.options label {
+  position: relative;
+  z-index: 11;
+}
+
+/* Radio button will automatically close dropdown when clicked */
+.options input[type="radio"]:focus ~ .dropdown-toggle {
+  display: none;
+}
+
+/* Fixed Online/Offline radio button styles */
+.gender-details {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.gender-details .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gender-details .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Responsive media query code for mobile devices */
+@media(max-width: 584px) {
+  .container-reg {
+    max-width: 100%;
+  }
+
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .category {
+    width: 100%;
+  }
+
+  .content form .user-details {
+    max-height: 237px;
+    overflow-y: scroll;
+  }
+
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+/* Responsive media query code for mobile devices */
+@media(max-width: 459px) {
+  .container-reg .content .category {
+    flex-direction: column;
+  }
+}
