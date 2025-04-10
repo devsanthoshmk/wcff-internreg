@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Starter Page - WCFF Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- reg css -->
+  <link href="assets/css/reg_style.css" rel="stylesheet">
+  <!--/ reg css -->
+
+  <!-- =======================================================
+  * Template Name: WCFF
+  * Template URL: https://bootstrapmade.com/WCFF-free-bootstrap-html-template-corporate/
+  * Updated: Feb 22 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">WCFF</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Registration Form</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Starter Section Section -->
+    <section id="starter-section" class="starter-section section" style="    padding: 56px 0;">
+
+      <div class="container" data-aos="fade-up">
+        <div id='reg' class="container-reg">
+          <!-- Title section -->
+          <div class="title">Registration</div>
+          <div class="content">
+            <!-- Registration form -->
+            <form action="#" id="registration-form">
+              <div class="user-details">
+                <!-- Input for Full Name -->
+                <div class="input-box">
+                  <span class="details">Full Name</span>
+                  <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+                </div>
+                <!-- Input for Email -->
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <!-- Input for Phone Number -->
+                <div class="input-box">
+                  <span class="details">Phone Number</span>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your number" required>
+                </div>
+                <!-- Domain Selection Dropdown -->
+                <div class="input-box" style="height: 72px;">
+                  <span class="details">Domain</span>
+                  <div class="select">
+                    <!-- Using hidden checkbox to toggle dropdown -->
+                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+                    <label for="dropdown-toggle" class="selected" data-default="Select Domain" data-one="AI" data-two="Data Science" data-three="Web Development" data-four="Cybersecurity" data-five="Editing" data-six="Cinematography" data-seven="Filmmaking" data-eight="Content Creation">
+                      <span class="selected-text">Select Domain</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
+                        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                      </svg>
+                    </label>
+                    <div class="options">
+                      <div title="all">
+                        <input id="all" name="domain" type="radio" value="none" checked="">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="all" data-txt="Select Domain"></label>
+                      </div>
+                      <div title="Technical-Domain">
+                        <input id="option-1" name="domain" type="radio" value="AI">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-1" data-txt="AI"></label>
+                      </div>
+                      <div title="Technical-Domain">
+                        <input id="option-2" name="domain" type="radio" value="Data Science">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-2" data-txt="Data science"></label>
+                      </div>
+                      <div title="Technical-Domain">
+                        <input id="option-3" name="domain" type="radio" value="Web Development">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-3" data-txt="Web Development"></label>
+                      </div>
+                      <div title="Technical-Domain">
+                        <input id="option-4" name="domain" type="radio" value="Cybersecurity">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-4" data-txt="Cybersecurity"></label>
+                      </div>
+                      <div title="Non Tech">
+                        <input id="option-5" name="domain" type="radio" value="Editing">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-5" data-txt="Editing"></label>
+                      </div>
+                      <div title="Non Tech">
+                        <input id="option-6" name="domain" type="radio" value="Cinematography">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-6" data-txt="Cinematography"></label>
+                      </div>
+                      <div title="Non Tech">
+                        <input id="option-7" name="domain" type="radio" value="Filmmaking">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-7" data-txt="Filmmaking"></label>
+                      </div>
+                      <div title="Non Tech">
+                        <input id="option-8" name="domain" type="radio" value="Content Creation">
+                        <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-8" data-txt="Content Creation"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Available Period - Changed to Month Range Selection -->
+                <div class="input-box">
+                  <span class="details">Available Period (For)</span>
+                  <div class="period-selection">
+                    <div class="month-select from-month" style="width: 48%;">
+                      <div class="select">
+                        <input type="checkbox" id="from-month-toggle" class="dropdown-toggle">
+                        <label for="from-month-toggle" class="selected" data-default="From Month">
+                          <span class="selected-text">From</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
+                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                          </svg>
+                        </label>
+                        <div class="options">
+                          <div title="default">
+                            <input id="from-default" name="from-month" type="radio" value="" checked>
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-default" data-txt="From Month"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-jan" name="from-month" type="radio" value="January">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-jan" data-txt="January"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-feb" name="from-month" type="radio" value="February">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-feb" data-txt="February"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-mar" name="from-month" type="radio" value="March">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-mar" data-txt="March"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-apr" name="from-month" type="radio" value="April">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-apr" data-txt="April"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-may" name="from-month" type="radio" value="May">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-may" data-txt="May"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-jun" name="from-month" type="radio" value="June">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-jun" data-txt="June"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-jul" name="from-month" type="radio" value="July">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-jul" data-txt="July"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-aug" name="from-month" type="radio" value="August">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-aug" data-txt="August"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-sep" name="from-month" type="radio" value="September">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-sep" data-txt="September"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-oct" name="from-month" type="radio" value="October">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-oct" data-txt="October"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-nov" name="from-month" type="radio" value="November">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-nov" data-txt="November"></label>
+                          </div>
+                          <div title="month">
+                            <input id="from-dec" name="from-month" type="radio" value="December">
+                            <label class="option" onclick="document.getElementById('from-month-toggle').checked = false;" for="from-dec" data-txt="December"></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="month-select to-month" style="width: 48%;">
+                      <div class="select">
+                        <input type="checkbox" id="to-month-toggle" class="dropdown-toggle">
+                        <label for="to-month-toggle" class="selected" data-default="To Month">
+                          <span class="selected-text">To</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
+                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                          </svg>
+                        </label>
+                        <div class="options">
+                          <div title="default">
+                            <input id="to-default" name="to-month" type="radio" value="" checked>
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-default" data-txt="To Month"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-jan" name="to-month" type="radio" value="January">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-jan" data-txt="January"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-feb" name="to-month" type="radio" value="February">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-feb" data-txt="February"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-mar" name="to-month" type="radio" value="March">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-mar" data-txt="March"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-apr" name="to-month" type="radio" value="April">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-apr" data-txt="April"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-may" name="to-month" type="radio" value="May">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-may" data-txt="May"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-jun" name="to-month" type="radio" value="June">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-jun" data-txt="June"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-jul" name="to-month" type="radio" value="July">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-jul" data-txt="July"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-aug" name="to-month" type="radio" value="August">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-aug" data-txt="August"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-sep" name="to-month" type="radio" value="September">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-sep" data-txt="September"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-oct" name="to-month" type="radio" value="October">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-oct" data-txt="October"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-nov" name="to-month" type="radio" value="November">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-nov" data-txt="November"></label>
+                          </div>
+                          <div title="month">
+                            <input id="to-dec" name="to-month" type="radio" value="December">
+                            <label class="option" onclick="document.getElementById('to-month-toggle').checked = false;" for="to-dec" data-txt="December"></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Hidden field to store the combined period value -->
+                    <input type="hidden" id="period" name="period" value="">
+                  </div>
+                </div>
+                <!-- Fixed Online/Offline radio buttons -->
+                <div class="input-box">
+                  <span class="details">Mode</span>
+                  <div class="gender-details">
+                    <input type="radio" name="mode" id="dot-1" value="online">
+                    <input type="radio" name="mode" id="dot-2" value="offline">
+                    
+                    <div class="category">
+                      <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Online</span>
+                      </label>
+                      <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Offline</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Submit button -->
+              <div class="button">
+                <input type="submit" id="submit-btn" name="submit" value="Register">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Starter Section Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">WCFF</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">WCFF</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- reg js -->
+  <script src="assets/js/reg.js"></script>
+
+</body>
+
+</html>

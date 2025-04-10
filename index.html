@@ -56,12 +56,16 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills" class="active">Domains</a></li>
+          <li><a href="#work-process" class="active">Registration Process</a></li>
+          <li><a href="#team" class="active">Team</a></li>
+          <li><a href="#faq-2" class="active">FAQs</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" onclick="toggleReg(event)">Register</a>
+      <a class="btn-getstarted" href="/registration.html">Register</a>
 
     </div>
   </header>
@@ -69,114 +73,7 @@
 
   <!-- reg win -->
   <div onclick="toggleReg(event)">
-    <div id='reg' class="container-reg">
-      <!-- Title section -->
-      <div class="title">Registration</div>
-        <div class="content">
-          <!-- Registration form -->
-          <form action="#">
-            <div class="user-details">
-              <!-- Input for Full Name -->
-              <div class="input-box">
-                <span class="details">Full Name</span>
-                <input type="text" placeholder="Enter your name" required>
-              </div>
-              <!-- Input for Email -->
-              <div class="input-box">
-                <span class="details">Email</span>
-                <input type="text" placeholder="Enter your email" required>
-              </div>
-              <!-- Input for Phone Number -->
-              <div class="input-box">
-                <span class="details">Phone Number</span>
-                <input type="text" placeholder="Enter your number" required>
-              </div>
-              <!-- Domain Selection Dropdown -->
-              <div class="input-box" style="height: 72px;">
-                <span class="details">Domain</span>
-                <div class="select">
-                  <!-- Using hidden checkbox to toggle dropdown -->
-                  <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
-                  <label for="dropdown-toggle" class="selected" data-default="Select Domain" data-one="AI" data-two="Data Science" data-three="Web Development" data-four="Cybersecurity" data-five="Editing" data-six="Cinematography" data-seven="Filmmaking" data-eight="Content Creation">
-                    <span class="selected-text">Select Domain</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
-                      <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
-                    </svg>
-                  </label>
-                  <div class="options">
-                    <div title="all">
-                      <input id="all" name="option" type="radio" checked="">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="all" data-txt="Select Domain"></label>
-                    </div>
-                    <div title="Technical-Domain">
-                      <input id="option-1" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-1" data-txt="AI"></label>
-                    </div>
-                    <div title="Technical-Domain">
-                      <input id="option-2" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-2" data-txt="Data science"></label>
-                    </div>
-                    <div title="Technical-Domain">
-                      <input id="option-3" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-3" data-txt="Web Development"></label>
-                    </div>
-                    <div title="Technical-Domain">
-                      <input id="option-4" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-4" data-txt="Cybersecurity"></label>
-                    </div>
-                    <div title="Non Tech">
-                      <input id="option-5" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-5" data-txt="Editing"></label>
-                    </div>
-                    <div title="Non Tech">
-                      <input id="option-6" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-6" data-txt="Cinematography"></label>
-                    </div>
-                    <div title="Non Tech">
-                      <input id="option-7" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-7" data-txt="Filmmaking"></label>
-                    </div>
-                    <div title="Non Tech">
-                      <input id="option-8" name="option" type="radio">
-                      <label class="option" onclick="document.getElementById('dropdown-toggle').checked = false;" for="option-8" data-txt="Content Creation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- available period -->
-              <div class="input-box">
-                <span class="details">Available Period</span>
-                <input type="text" placeholder="Enter Available Period" required="">
-              </div>
-              <!-- Fixed Online/Offline radio buttons -->
-              <div class="input-box">
-                <span class="details">Mode</span>
-                <div class="gender-details">
-                  <input type="radio" name="mode" id="dot-1">
-                  <input type="radio" name="mode" id="dot-2">
-                  
-                  <div class="category">
-                    <label for="dot-1">
-                      <span class="dot one"></span>
-                      <span class="gender">Online</span>
-                    </label>
-                    <label for="dot-2">
-                      <span class="dot two"></span>
-                      <span class="gender">Offline</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            
-            
-            <!-- Submit button -->
-            <div class="button">
-              <input type="submit" value="Register">
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    
   </div>
   <!-- /reg win -->
 
@@ -297,61 +194,7 @@
 
     </section><!-- /About Section -->
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="section why-us light-background" data-builder="section">
 
-      <div class="container-fluid">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-
-            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3><span>Eum ipsam laborum deleniti </span><strong>velit pariatur architecto aut nihil</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-            </div>
-
-            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="faq-item faq-active">
-
-                <h3><span>01</span> Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span>02</span> Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span>03</span> Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Why Us Section -->
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -366,36 +209,36 @@
 
           <div class="col-lg-6 pt-4 pt-lg-0 content">
 
-            <h3>Voluptatem dignissimos provident quasi corporis voluptas</h3>
-            <p class="fst-italic">
+            <h3>Areas we hire interns</h3>
+            <!-- <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            </p> -->
 
             <div class="skills-content skills-animation">
 
               <div class="progress">
-                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                <span class="skill"><span>Full-Stack</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                <span class="skill"><span>AI/ML</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+                <span class="skill"><span>Cybersecurity</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+                <span class="skill"><span>Non Technical-Domains <i class="bi bi-info-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i> </span> <i class="val">55%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -410,64 +253,14 @@
 
     </section><!-- /Skills Section -->
 
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
 
     <!-- Work Process Section -->
     <section id="work-process" class="work-process section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Work Process</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Registration Process</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -481,7 +274,7 @@
               </div>
               <div class="steps-content">
                 <div class="steps-number">01</div>
-                <h3>Research &amp; Analysis</h3>
+                <h3>Application Submission</h3>
                 <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
                 <div class="steps-features">
                   <div class="feature-item">
@@ -508,7 +301,7 @@
               </div>
               <div class="steps-content">
                 <div class="steps-number">02</div>
-                <h3>Design &amp; Planning</h3>
+                <h3> Resume Screening</h3>
                 <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
                 <div class="steps-features">
                   <div class="feature-item">
@@ -535,7 +328,61 @@
               </div>
               <div class="steps-content">
                 <div class="steps-number">03</div>
-                <h3>Development &amp; Launch</h3>
+                <h3>Shortlist</h3>
+                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Development</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Testing</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Deployment</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="assets/img/steps/steps-3.webp" alt="Step 3" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">04</div>
+                <h3> Interview </h3>
+                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Development</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Testing</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Deployment</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="assets/img/steps/steps-3.webp" alt="Step 3" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">05</div>
+                <h3>Onboarding</h3>
                 <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.</p>
                 <div class="steps-features">
                   <div class="feature-item">
@@ -582,125 +429,6 @@
 
     </section><!-- /Call To Action Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-portrait-1.webp" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-1.webp" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-3.webp" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-4.webp" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-portrait-2.webp" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/portfolio/portfolio-portrait-3.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-portrait-3.webp" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-7.webp" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-8.webp" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/portfolio/portfolio-9.webp" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
 
     <!-- Team Section -->
     <section id="team" class="team section">
@@ -766,22 +494,6 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/person/person-f-4.webp" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
 
         </div>
 
@@ -789,186 +501,7 @@
 
     </section><!-- /Team Section -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-m-9.webp" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-f-12.webp" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-m-12.webp" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/person/person-m-13.webp" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
+ 
 
     <!-- Faq 2 Section -->
     <section id="faq-2" class="faq-2 section light-background">
@@ -976,71 +509,81 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Learn more about our services, approach, and how we provide top-notch technology and security solutions tailored to client's business needs.</p>
       </div><!-- End Section Title -->
-
+    
       <div class="container">
-
         <div class="row justify-content-center">
-
           <div class="col-lg-10">
-
             <div class="faq-container">
-
+    
+              <!-- FAQ 1 -->
               <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <h3>What services does WCFF offer?</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p>
+                    WCFF delivers a comprehensive range of technology and security services including cybersecurity solutions (threat protection, penetration testing, and awareness workshops), dynamic website and application development, SEO-optimized content writing, and digital marketing strategies. We also develop innovative IoT projects, e-commerce solutions, and provide branding and design services, along with training, internships, and workshops in key technology fields.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
+    
+              <!-- FAQ 2 -->
               <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                <h3>How does WCFF ensure the security and performance of its solutions?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>
+                    Our approach integrates robust cybersecurity measures including firewalls, intrusion detection systems, regular security assessments, and ongoing monitoring to safeguard against threats like malware and phishing. Our agile web and application development practices focus on responsive design, optimized loading speeds, and rigorous testing to ensure high performance and reliable operation across platforms.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
+    
+              <!-- FAQ 3 -->
               <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <h3>How does WCFF tailor its solutions to meet specific client needs?</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                  <p>
+                    We follow a client-centric process from consultation to delivery, ensuring transparency and constant communication. By understanding each client’s vision and unique requirements, we customize our technology and security solutions to deliver impactful, tailored results that align with your business goals.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
+    
+              <!-- FAQ 4 -->
               <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                <h3>What industries and business sizes does WCFF serve?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>
+                    WCFF serves a diverse range of industries and business sizes—from startups looking to build an online presence to large enterprises that require robust cybersecurity and scalable digital solutions. Our flexible service packages are designed to provide cost-effective and innovative technology solutions that cater to various sectors.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
+    
+              <!-- FAQ 5 -->
               <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
+                <h3>Does WCFF provide ongoing support after project delivery?</h3>
                 <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                  <p>
+                    Yes, our commitment extends beyond project delivery. We offer continuous support and maintenance to ensure that your digital assets remain secure, updated, and fully optimized. Our proactive approach addresses any emerging issues promptly, enabling your business to adapt and thrive in an evolving digital landscape.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
+    
             </div>
-
           </div>
-
         </div>
-
       </div>
-
+    
     </section><!-- /Faq 2 Section -->
+    
 
     <!-- Subscribe Section -->
     <section id="subscribe" class="subscribe section">
@@ -1070,117 +613,6 @@
       </div>
     </section><!-- /Subscribe Section -->
 
-    <!-- Recent Blog Postst Section -->
-    <section id="recent-blog-postst" class="recent-blog-postst section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Blog Posts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-post-1.webp" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-post-2.webp" class="img-fluid" alt="">
-                <span class="post-date">July 17</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-item position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-post-3.webp" class="img-fluid" alt="">
-                <span class="post-date">September 05</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Recent Blog Postst Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1369,8 +801,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-    <!-- reg js -->
-    <script src="assets/js/reg.js"></script>
+  <!-- reg js -->
+  <script src="assets/js/reg.js"></script>
 
 </body>
 

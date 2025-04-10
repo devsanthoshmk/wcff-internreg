@@ -243,7 +243,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -760,7 +760,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0 0 10px 0;
+  /* padding: 0 0 10px 0; */
   margin: 0;
   font-size: 14px;
 }
@@ -3575,4 +3575,45 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+
+/* Additional CSS for the month selection dropdowns */
+.period-selection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.period-selection .month-select {
+  position: relative;
+}
+
+.period-selection .month-select .select {
+  width: 100%;
+}
+
+.period-selection .month-select .options {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media(max-width: 584px) {
+  .period-selection {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .period-selection .month-select {
+    width: 100% !important;
+  }
+  
+  .period-selection div[style*="width: 4%"] {
+    width: 100% !important;
+    text-align: center;
+    margin: 5px 0;
+  }
 }

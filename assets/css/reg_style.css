@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 .container-reg {
-  position: absolute;
+  /* position: absolute; */
   max-width: 700px;
   width: 100%;
   background-color: #fff;
@@ -18,16 +18,9 @@
   right: 0;
   margin: auto;
   height: fit-content;
-  opacity: 0;
-  transform: translateY(-20px);
+  /* opacity: 0; */
+  /* transform: translateY(-20px); */
   transition: all 0.5s ease;
-  pointer-events: none;
-}
-
-.container-reg.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
 }
 
 .container-reg .title {
@@ -53,11 +46,10 @@
   justify-content: space-between;
   margin: 20px 0 12px 0;
   max-height: 340px;
-  overflow-y: auto;
 }
 
 form .user-details .input-box {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   width: calc(100% / 2 - 20px);
 }
 
@@ -126,7 +118,6 @@ form input[type="radio"] {
 form .button {
   width: 100%;
   height: 45px;
-  margin: 0 1.3vw;
 }
 
 form .button input {
