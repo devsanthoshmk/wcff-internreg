@@ -5,6 +5,10 @@ const { Pool } = require('pg');
 const cors = require('cors');
 require('dotenv').config();
 
+const {sendMail} = require('./mail.js'); // Import the sendMail function
+const fs = require('fs'); 
+
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -14,7 +18,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
+  ssl: {
+    ca: fs.readFileSync('prod-ca-2021.crt').toString()
+}
 });
 
 pool.connect((err, client, release) => {
@@ -24,7 +30,10 @@ pool.connect((err, client, release) => {
   console.log('Connected to PostgreSQL database');
   release();
 });
-
+pool.on('error', (err) => {
+  console.error('Unexpected error on idle client', err);
+  // Optionally, you might want to exit the process or reconnect
+});
 app.post('/api/applications', async (req, res) => {
   try {
     const { name, mobile_number, email, domain, available_period, mode } = req.body;
@@ -167,6 +176,43 @@ app.delete('/api/applications/:id', async (req, res) => {
     res.status(500).json({ error: 'Server error while deleting application' });
   }
 });
+
+
+
+
+// sending contact us mail
+app.post('/api/send-email', async (req, res) => {
+  try {
+    // Extract data from request body
+    const { name, email, subject, message } = req.body;
+    
+    // Validate form data
+    if (!name || !email || !subject || !message) {
+      return res.status(400).json({ error: 'All fields are required' });
+    }
+    
+    // Call the sendMail function with the form data
+    const info = await sendMail({
+      name,
+      email,
+      subject,
+      message
+    });
+    
+    // Send success response
+    res.status(200).json({ 
+      message: 'Email sent successfully',
+      info: info 
+    });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Server error while sending email' });
+  }
+});
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
