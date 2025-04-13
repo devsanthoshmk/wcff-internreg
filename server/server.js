@@ -210,6 +210,45 @@ app.post('/api/send-email', async (req, res) => {
   }
 });
 
+app.post('/api/newsletter', async (req, res) => {
+  try {
+    const { email } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ error: 'Email is required' });
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
+    }
+    
+    const query = `
+      INSERT INTO newsletter (email)
+      VALUES ($1)
+      RETURNING *
+    `;
+    
+    const values = [email];
+    const result = await pool.query(query, values);
+    
+    res.status(201).json({
+      success: true,
+      message: 'Newsletter subscription successful',
+      data: result.rows[0]
+    });
+  } catch (error) {
+    if (error.code === '23505') {
+      return res.status(409).json({ 
+        error: 'This email is already subscribed to the newsletter' 
+      });
+    }
+    
+    console.error('Error subscribing to newsletter:', error);
+    res.status(500).json({ error: 'Server error while subscribing to newsletter' });
+  }
+})
+
 
 
 

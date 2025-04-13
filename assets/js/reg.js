@@ -1,5 +1,68 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+// for newsletter
+// Get the newsletter form element
+const newsletterForm = document.querySelectorAll('.newsletter');
+// Add event listener for form submission
+newsletterForm.forEach(form => {
+  form.addEventListener('submit', handleNewsletterSubmit);
+});
+
+
+// Function to handle newsletter form submission  
+async function handleNewsletterSubmit(event) {
+  // Prevent the default form submission  
+  event.preventDefault();
+  // Get form input values
+  const email = event.target.querySelector('input[type="email"]').value.trim();
+  // Validate email
+  if (!isValidEmail(email)) {
+    displayError('#email', 'Please enter a valid email address');
+    return;
+  }
+  // Create data object to send to the API
+  const formData = { email: email };
+  try {
+    // Show loading state
+    const submitButton = event.target.querySelector('input[type="submit"]');
+    const originalButtonValue = submitButton.value;
+    submitButton.value = 'Submitting...';
+    submitButton.disabled = true;
+    // Send the data to the API
+    const response = await fetch('http://localhost:3000/api/newsletter', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    // Parse the response
+    const result = await response.json();
+    // Reset button state
+    submitButton.value = originalButtonValue;
+    submitButton.disabled = false;
+    // Handle the response
+    if (response.ok) {
+      // Show success message
+      showMessage('Subscription successful!', 'success');
+      // Reset the form
+      event.target.reset();
+    } else {
+      // Show error message
+      showMessage(result.error || 'Subscription failed. Please try again.', 'error');
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    showMessage('An error occurred. Please check your connection and try again.', 'error');
+    
+    // Reset button
+    document.querySelector('.button input[type="submit"]').value = originalButtonValue;
+    document.querySelector('.button input[type="submit"]').disabled = false;
+  }
+
+}
+
+  
   // Get the form element
   const registrationForm = document.querySelector('#reg form');
   
